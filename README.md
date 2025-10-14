@@ -62,24 +62,25 @@ Website-Crawler/
 ```
 
 📊 Config (config/settings.yaml)
+   
    crawl:
-     max_depth: 2
-     delay: 500
-     max_pages:20
+  max_depth: 2
+  delay: 500
+  max_pages: 20
 
-   embedding:
-     model: sentence-transformers/all-MiniLM-L6-v2  # opens source model from Huggingface for embeddings.
-     chunk_size: 256
-     overlap: 50
+embedding:
+  model: sentence-transformers/all-MiniLM-L6-v2 # opens source model from Huggingface for embeddings.
+  chunk_size: 256
+  overlap: 50
 
-   vectorstore:
-     backend: faiss
-     dimension: 384
+vectorstore:
+  backend: faiss
+  dimension: 384
 
-   generation:
-     model: llama-3.1-8b-instant
-     max_tokens: 500
-     tempetrature:0.0
+generation:
+  model: llama-3.1-8b-instant
+  max_tokens: 500
+  temperature: 0.0
 
 ⚖️ Design Trade-offs (10–15 concise points)
 
