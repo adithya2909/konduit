@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+requests
+beautifulsoup4
+pydantic
+langchain>=0.0.172
+sentence-transformers
+faiss-cpu
+transformers
+torch     # or specify cpu/gpu wheel as appropriate
+python-multipart
+PyYAML
+dotenv
+groq
