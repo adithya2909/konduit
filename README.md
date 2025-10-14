@@ -25,8 +25,8 @@ A modular **Retrieval-Augmented Generation (RAG)** system that crawls websites, 
 This project implements a comprehensive Retrieval-Augmented Generation (RAG) pipeline that uses a website crawler to build its knowledge base.
 
 ## 🚀 Architecture Overview
+```
 
-'''
 Website-Crawler/
 ├── main.py                 # Entry point for the RAG pipeline
 │
@@ -58,7 +58,9 @@ Website-Crawler/
     ├── raw_html/           # Cached raw HTML pages
     ├── cleaned_text/       # Cleaned text extracted from pages
     └── index/              # Stored embeddings / vector DB '''
-    
+
+```
+
 📊 Config (config/settings.yaml)
    crawl:
      max_depth: 2
