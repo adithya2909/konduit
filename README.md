@@ -20,38 +20,44 @@ A modular **Retrieval-Augmented Generation (RAG)** system that crawls websites, 
 4.Configure settings
   Edit config/settings.yaml to set crawl depth, embedding model, chunk size, vector store type, etc.
 
-🧩 Architecture Overview
+# 🕸️ Website-Crawler RAG Pipeline
+
+This project implements a comprehensive Retrieval-Augmented Generation (RAG) pipeline that uses a website crawler to build its knowledge base.
+
+## 🚀 Architecture Overview
+
+'''
 Website-Crawler/
-├── main.py                  # Entry point for the RAG pipeline
+├── main.py                 # Entry point for the RAG pipeline
 │
 ├── config/
-│   └── settings.yaml        # Configuration (crawl depth, model, embedding type, etc.)
+│   └── settings.yaml       # Configuration (crawl depth, model, embedding type, etc.)
 │
 ├── crawler/
-│   ├── crawler.py           # Crawls website (respects robots.txt, domain limits)
-│   └── parser.py            # Cleans & extracts text from HTML pages
+│   ├── crawler.py          # Crawls website (respects robots.txt, domain limits)
+│   └── parser.py           # Cleans & extracts text from HTML pages
 │
 ├── indexing/
-│   ├── chunker.py           # Splits text into chunks
-│   ├── embedder.py          # Embeds chunks via OpenAI / SentenceTransformers
-│   └── vectorstore.py       # Stores and retrieves embeddings (FAISS / Chroma)
+│   ├── chunker.py          # Splits text into chunks
+│   ├── embedder.py         # Embeds chunks via OpenAI / SentenceTransformers
+│   └── vectorstore.py      # Stores and retrieves embeddings (FAISS / Chroma)
 │
 ├── retrieval/
-│   └── retriever.py         # Retrieves top-k relevant chunks
+│   └── retriever.py        # Retrieves top-k relevant chunks
 │
 ├── generation/
-│   └── generator.py         # Generates grounded answers using retrieved context
+│   └── generator.py        # Generates grounded answers using retrieved context
 │
 ├── evaluation/
-│   └── evaluate.py          # Computes recall@k, grounding correctness, etc.
+│   └── evaluate.py         # Computes recall@k, grounding correctness, etc.
 │
 ├── utils/
-│   └── logger.py            # Logging, timing, and error handling utilities
+│   └── logger.py           # Logging, timing, and error handling utilities
 │
 └── data/
-    ├── raw_html/            # Cached raw HTML pages
-    ├── cleaned_text/        # Cleaned text extracted from pages
-    └── index/               # Stored embeddings / vector DB
+    ├── raw_html/           # Cached raw HTML pages
+    ├── cleaned_text/       # Cleaned text extracted from pages
+    └── index/              # Stored embeddings / vector DB '''
     
 📊 Config (config/settings.yaml)
    crawl:
