@@ -83,7 +83,7 @@ generation:
   temperature: 0.0
   ```
 
-⚖️ Design Trade-offs (10–15 concise points)
+⚖️ Design Trade-offs:
 
 ✅ Modular architecture – Each stage (crawl → index → retrieve → generate) is isolated and reusable.
 
@@ -108,8 +108,6 @@ generation:
 ✅ Easy to extend – Add retrieval strategies or chain-of-thought generators.
 
 ✅ Compatible with LangChain / LlamaIndex – Plug-and-play design.
-
-✅ Tested pipeline – Core components validated in tests/test_pipeline.py.
 
 ✅ Portable – Works locally or via Docker.
 
