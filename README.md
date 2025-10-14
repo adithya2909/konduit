@@ -62,8 +62,8 @@ Website-Crawler/
 ```
 
 📊 Config (config/settings.yaml)
-   
-   crawl:
+```
+crawl:
   max_depth: 2
   delay: 500
   max_pages: 20
@@ -81,6 +81,7 @@ generation:
   model: llama-3.1-8b-instant
   max_tokens: 500
   temperature: 0.0
+  ```
 
 ⚖️ Design Trade-offs (10–15 concise points)
 
